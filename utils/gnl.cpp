@@ -17,8 +17,7 @@ using namespace std;
 
 void gnl(int fd, char const * expectedReturn)
 {
-	char *  gnlReturn;
-	get_next_line(fd, &gnlReturn);
+	char *  gnlReturn = get_next_line(fd);
 	if (expectedReturn == NULL)
 		check(gnlReturn == NULL);
 	else
